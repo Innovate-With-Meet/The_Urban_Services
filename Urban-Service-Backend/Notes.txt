@@ -1,0 +1,9 @@
+Direction:
+The User has multiple User
+The Role has multiple Role
+
+ex: Enduser::ex: EndRole
+ex: Provider:: ex:: Provider Role
+
+A specific login for the specific user that is define the specific Role
+[ex: the samir is the user that login the web for the Provider Role]
