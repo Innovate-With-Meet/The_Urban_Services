@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Direction:
 The User has multiple User
 The Role has multiple Role
@@ -7,3 +8,14 @@ ex: Provider:: ex:: Provider Role
 
 A specific login for the specific user that is define the specific Role
 [ex: the samir is the user that login the web for the Provider Role]
+=======
+Direction:
+The User has multiple User
+The Role has multiple Role
+
+ex: Enduser::ex: EndRole
+ex: Provider:: ex:: Provider Role
+
+A specific login for the specific user that is define the specific Role
+[ex: the samir is the user that login the web for the Provider Role]
+>>>>>>> 487dbc7a72b152e91eaf9da07a372b3610d3c52b
