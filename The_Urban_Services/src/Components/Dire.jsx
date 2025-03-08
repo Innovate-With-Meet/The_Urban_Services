@@ -16,6 +16,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { ThreeDRotation } from "@mui/icons-material";
 import { Time } from "./Time";
+import { AuthenticationMenu } from "../Authentication/SignIn/AuthenticationMenu"; ``
 // Pages & User Options
 const pages = [
   "Home",
@@ -29,6 +30,7 @@ const pages = [
   // "User",
   "Time",
   "Dashboard",
+  "AuthenticationMenu",
 ];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
