@@ -16,21 +16,17 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { ThreeDRotation } from "@mui/icons-material";
 import { Time } from "./Time";
-import { AuthenticationMenu } from "../Authentication/SignIn/AuthenticationMenu"; ``
-// Pages & User Options
 const pages = [
   "Home",
   "About",
   "Services",
   "Contact",
-  "SignIn",
-  "SignUp",
-  // "Admin",
-  // "Provider",
-  // "User",
   "Time",
   "Dashboard",
-  "AuthenticationMenu",
+  "BlogPage",
+  "TestCode",
+  "Log_In",
+  "Registration",
 ];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
