@@ -1,5 +1,5 @@
 // import { BrowserRouter as Routes, Route } from 'react-router-dom';
-import { SignUp } from "./Authentication/SignIn/SignUp";
+// import { SignUp } from "./Authentication/SignIn/SignUp";
 import { Dire } from "./Components/Dire";
 import { Time } from "./Components/Time";
 import { Dashboard } from "./Admin/Dashboard/Dashboard";
@@ -15,8 +15,13 @@ import { ProviderRegistration } from "./Authentication/SignIn/Provider/ProviderR
 import { UserRegistration } from "./Authentication/SignIn/End-User/UserRegistration";
 import { Registration } from "./Authentication/SignIn/Registration";
 import { Home } from "./Hero/Home";
+import { Services } from "./Services/Services";
 import { BlogPage } from "../src/Blog/BlogPage";
 import { TestCode } from "../src/TestCode";
+import { AdminProfile } from "../src/Profiles/AdminProfile";
+import { Contact } from "./Contact/Contact";
+import { Aboutus } from "./Aboutus/Aboutus";
+import { UserProfile } from "./Profiles/UserProfile";
 function App() {
   return (
     <>
@@ -26,6 +31,17 @@ function App() {
         <Route path="/Home" element={<Home />}></Route>
         <Route path="/BlogPage" element={<BlogPage />}></Route>
         <Route path="/TestCode" element={<TestCode />}></Route>
+        <Route path="/Services" element={<Services />}></Route>
+        <Route path="/AdminProfile" element={<AdminProfile />}></Route>
+        <Route path="/Contact" element={<Contact />}></Route>
+        <Route path="/Aboutus" element={<Aboutus />}></Route>
+
+
+        {/* Profile */}
+
+        <Route path="/UserProfile" element={<UserProfile />}></Route>
+
+        {/* Profile */}
 
 
         {/* login module */}
@@ -41,6 +57,7 @@ function App() {
         {/* registration module */}
 
         {/* authentication component */}
+        {/* this is the MenuList Only */}
         <Route path="/Log_In" element={<Log_In />}></Route>
         <Route path="/Registration" element={<Registration />}></Route>
 
@@ -48,7 +65,7 @@ function App() {
 
 
         <Route path="/Landing" element={<Landing />}></Route>
-        <Route path="/SignUp" element={<SignUp />}></Route>
+        {/* <Route path="/SignUp" element={<SignUp />}></Route> */}
         <Route path="/Time" element={<Time />}></Route>
         <Route path="/" element={<Home />}></Route>
         {/* For The Default Page */}

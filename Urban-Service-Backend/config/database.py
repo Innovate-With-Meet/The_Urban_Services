@@ -7,14 +7,18 @@ db = client[DATABASE_NAME]
 
 
 
-user_collection = db["user"]
+end_user_collection = db["user"]
+admin_user_collection = db["admin_user"]
+provider_user_collection = db["provider_user"]
+
 # 
 role_collection = db["role"]
 # 
-categoryid_collection = db["categoryid"]
+# categoryid_collection = db["categoryid"]
 # category_id category_name description created_at
-subcategoryid_collection = db["subcategoryid"]
-# subcategory_id category_id subcategory_name description created_at
+# subcategoryid_collection = db["subcategoryid"]
+# subcategory_id category_id subcategory_name description created_atservice_collection = db["service"]
+
 service_collection = db["service"]
 # provider_id, provider_id, service_name, price, duration, availability, created_at
 # booking_collection = db["booking"]
