@@ -246,7 +246,7 @@ export const Time = () => {
 
   if (!storedTarget) {
     let targetDate = new Date();
-    targetDate.setDate(targetDate.getDate() + 54);
+    targetDate.setDate(targetDate.getDate() + 16);
     storedTarget = targetDate.getTime();
     localStorage.setItem("countdownTarget", storedTarget.toString());
   }
@@ -289,12 +289,12 @@ export const Time = () => {
     <Box
       sx={{
         textAlign: "center",
-        bgcolor: "#FBFFE4",
-        color: "red",
+        bgcolor: "#3674B5",
+        color: "Yellow",
         p: 1,
         border: "1px solid #ddd",
         borderRadius: "10px",
-        borderColor: "red",
+        borderColor: "#FFF2F2",
         width: "130px",
         margin: "1px",
         mt: 3,

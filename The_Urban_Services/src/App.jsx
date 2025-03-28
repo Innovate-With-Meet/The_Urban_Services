@@ -3,8 +3,7 @@
 import { Dire } from "./Components/Dire";
 import { Time } from "./Components/Time";
 import { Dashboard } from "./Admin/Dashboard/Dashboard";
-import { Landing } from "./Landing";
-import { Error } from "./Error";
+import { Error } from "./Components/Error";
 import { Route, Routes } from "react-router-dom";
 import { AdminLogIn } from "./Authentication/SignIn/Admin/AdminLogIn";
 import { ProviderLogIn } from "./Authentication/SignIn/Provider/ProviderLogin"
@@ -17,11 +16,14 @@ import { Registration } from "./Authentication/SignIn/Registration";
 import { Home } from "./Hero/Home";
 import { Services } from "./Services/Services";
 import { BlogPage } from "../src/Blog/BlogPage";
-import { TestCode } from "../src/TestCode";
+import { TestCode } from "../src/Components/TestCode";
 import { AdminProfile } from "../src/Profiles/AdminProfile";
 import { Contact } from "./Contact/Contact";
 import { Aboutus } from "./Aboutus/Aboutus";
 import { UserProfile } from "./Profiles/UserProfile";
+import { ProviderProfile } from "./Profiles/ProviderProfile";
+import { ProviderRequestPage } from "./Service-Provider/ProviderRequestPage";
+// import { Logout } from "../src/Authentication/Logout";
 function App() {
   return (
     <>
@@ -38,10 +40,21 @@ function App() {
 
 
         {/* Profile */}
+        {/* <Route path="Logout" element={<Logout />}></Route> */}
 
-        <Route path="/UserProfile" element={<UserProfile />}></Route>
+        <Route path="UserProfile" element={<UserProfile />}></Route>
+        <Route path="ProviderProfile" element={<ProviderProfile />}></Route>
+
 
         {/* Profile */}
+
+        {/* Profile */}
+
+        <Route path="/ProviderRequestPage" element={<ProviderRequestPage />}></Route>
+
+        {/* Profile */}
+
+
 
 
         {/* login module */}
@@ -64,8 +77,6 @@ function App() {
         {/* authentication component */}
 
 
-        <Route path="/Landing" element={<Landing />}></Route>
-        {/* <Route path="/SignUp" element={<SignUp />}></Route> */}
         <Route path="/Time" element={<Time />}></Route>
         <Route path="/" element={<Home />}></Route>
         {/* For The Default Page */}

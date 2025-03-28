@@ -28,6 +28,7 @@ export const Dashboard = (props) => {
   return (
     <AppTheme {...props} themeComponents={xThemeComponents}>
       <CssBaseline enableColorScheme />
+      {/* It is the background color of the dashboard */}
       <Box sx={{ display: "flex" }}>
         {/* <SideMenu /> */}
         <AppNavbar />
@@ -51,7 +52,8 @@ export const Dashboard = (props) => {
             }}
           >
             <Header />
-            <MainGrid />
+            <MainGrid />           {/*  The All Component of the Dashboard */}
+
           </Stack>
         </Box>
       </Box>

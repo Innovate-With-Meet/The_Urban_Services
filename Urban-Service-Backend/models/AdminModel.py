@@ -28,6 +28,6 @@ class AdminUserOut(BaseModel):
             return str(v)
         return v
 class AdminUserLogin(BaseModel):
-    adminId: str
+    # adminId: str
     email: str
     password: str

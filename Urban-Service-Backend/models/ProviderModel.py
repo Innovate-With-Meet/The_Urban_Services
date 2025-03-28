@@ -4,6 +4,7 @@ from typing import Optional
 import bcrypt   # pip install bcrypt
 
 class ProviderUser(BaseModel):
+    
     providerId: str
     name: str
     email: str
@@ -28,6 +29,6 @@ class ProviderUserOut(BaseModel):
             return str(v)
         return v
 class ProviderUserLogin(BaseModel):
-    providerId: str
+    # providerId: str
     email: str
     password: str

@@ -1,9 +1,21 @@
 from models.AdminModel import AdminUser,AdminUserOut,AdminUserLogin
 from bson import ObjectId
 from config.database import admin_user_collection
-from fastapi import HTTPException
+from fastapi import HTTPException, Depends
 from fastapi.responses import JSONResponse
 import bcrypt
+from datetime import datetime, timedelta
+import jwt
+
+SECRET_KEY = "your_secret_admin_key"
+ALGORITHM = "HS256"
+ACCESS_TOKEN_EXPIRE_MINUTES = 30
+
+def create_access_token(data: dict, expires_delta: timedelta | None = None):
+    to_encode = data.copy()
+    expire = datetime.utcnow() + (expires_delta or timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES))
+    to_encode.update({"exp": expire})
+    return jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
 
 async def addAdminUser(admin_user: AdminUser):
     result = await admin_user_collection.insert_one(admin_user.dict(exclude_unset=True))
@@ -26,7 +38,13 @@ async def loginAdminUser(request: AdminUserLogin):
     foundAdminUser["_id"] = str(foundAdminUser["_id"])
 
     if "password" in foundAdminUser and bcrypt.checkpw(request.password.encode(), foundAdminUser["password"].encode()):
-        return {"message": "Admin User login success", "user": AdminUserOut(**foundAdminUser)}
+        access_token = create_access_token(data={"sub": foundAdminUser["email"]})
+
+        return {
+            "message": "User login success",
+            "access_token": access_token,
+            "token_type": "bearer",
+            "user": AdminUserOut(**foundAdminUser)
+        }
     else:
         raise HTTPException(status_code=401, detail="Invalid password")
-    

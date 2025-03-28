@@ -1,9 +1,22 @@
 from models.ProviderModel import ProviderUser,ProviderUserOut,ProviderUserLogin
 from bson import ObjectId
 from config.database import provider_user_collection
-from fastapi import HTTPException
+from fastapi import HTTPException, Depends
 from fastapi.responses import JSONResponse
 import bcrypt
+from datetime import datetime, timedelta
+import jwt
+
+SECRET_KEY = "your_secret_provider_key"
+ALGORITHM = "RS256"
+ACCESS_TOKEN_EXPIRE_MINUTES = 300
+
+def create_access_token(data: dict, expires_delta: timedelta | None = None):
+    to_encode = data.copy()
+    expire = datetime.utcnow() + (expires_delta or timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES))
+    to_encode.update({"exp": expire})
+    return jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
+
 
 async def addProviderUser(provider_user: ProviderUser):
     result = await provider_user_collection.insert_one(provider_user.dict(exclude_unset=True))
@@ -26,6 +39,13 @@ async def loginProviderUser(request: ProviderUserLogin):
     foundProviderUser["_id"] = str(foundProviderUser["_id"])
 
     if "password" in foundProviderUser and bcrypt.checkpw(request.password.encode(), foundProviderUser["password"].encode()):
-        return {"message": "Provider User login success", "user": ProviderUserOut(**foundProviderUser)}
+        access_token = create_access_token(data={"sub": foundProviderUser["email"]})
+
+        return {
+            "message": "User login success",
+            "access_token": access_token,
+            "token_type": "bearer",
+            "user": ProviderUserOut(**foundProviderUser)
+        }
     else:
         raise HTTPException(status_code=401, detail="Invalid password")

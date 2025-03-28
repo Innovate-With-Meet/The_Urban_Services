@@ -23,14 +23,23 @@ export const Header = () => {
       }}
       spacing={2}
     >
-      <NavbarBreadcrumbs />
+      <NavbarBreadcrumbs /> {/* the Navbar like Dashboard/ Home */}
+
       <Stack direction="row" sx={{ gap: 1 }}>
         <Search />
+        {/* The Search Bar,  Adding the Func to search the query */}
+
         <CustomDatePicker />
+        {/* Calander */}
+
         <MenuButton showBadge aria-label="Open notifications">
+          {/* add the notification func here */}
           <NotificationsRoundedIcon />
+          {/* notification button */}
         </MenuButton>
+
         <ColorModeIconDropdown />
+        {/* the light and dark theme functionality */}
       </Stack>
     </Stack>
   );
