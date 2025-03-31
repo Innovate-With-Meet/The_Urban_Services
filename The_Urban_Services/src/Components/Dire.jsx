@@ -19,8 +19,6 @@ import { ThreeDRotation } from "@mui/icons-material";
 import { Time } from "./Time";
 import { useNavigate } from "react-router-dom";
 import ColorModeIconDropdown from "../shared-theme/ColorModeIconDropdown"
-// import { UserProfile } from "./Profiles/UserProfile";
-import { UserProfile } from "../Profiles/UserProfile"
 
 const pages = [
   { name: "Home", path: "/" },

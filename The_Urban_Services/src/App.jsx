@@ -18,9 +18,11 @@ import { Services } from "./Services/Services";
 import { BlogPage } from "../src/Blog/BlogPage";
 import { TestCode } from "../src/Components/TestCode";
 import { AdminProfile } from "../src/Profiles/AdminProfile";
-import { Contact } from "./Contact/Contact";
+import { Contact } from "../src/Contact";
 import { Aboutus } from "./Aboutus/Aboutus";
 import { UserProfile } from "./Profiles/UserProfile";
+// import { UserProfile } from "./UserProfile/UserProfile";
+
 import { ProviderProfile } from "./Profiles/ProviderProfile";
 import { ProviderRequestPage } from "./Service-Provider/ProviderRequestPage";
 // import { Logout } from "../src/Authentication/Logout";

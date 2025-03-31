@@ -7,7 +7,9 @@ class User(BaseModel): #Post Method
     name: str
     email: str
     password: str
-    
+    # address: Optional[str] = None  # Optional field for address
+    # image: Optional[str] = None    # Optional field for image
+
     @validator("password", pre=True, always=True)
     def encrypt_password(cls, v):
         if v is None:
@@ -19,7 +21,9 @@ class UserOut(BaseModel): #Get method
     name: str
     email: Optional[str] = None
     password: Optional[str] = None # it gives the encrypted password to the end_user
-    
+    address: Optional[str] = None  # Optional field for address
+    image: Optional[str] = None    # Optional field for image
+
     @validator("id", pre=True, always=True)
     def convert_objectId(cls, v):
         if isinstance(v, ObjectId):
