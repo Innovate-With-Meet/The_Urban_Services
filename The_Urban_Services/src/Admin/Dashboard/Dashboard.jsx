@@ -8,7 +8,8 @@ import Stack from "@mui/material/Stack";
 import { AppNavbar } from "./Components/AppNavbar";
 import { Header } from "./Components/Header";
 import { MainGrid } from "./Components/MainGrid";
-// import { SideMenu } from "./Components/SideMenu";
+import { Navbar } from "../../Layout/Navbar";
+import { SideMenu } from "./Components/SideMenu";
 import AppTheme from "../../shared-theme/AppTheme";
 import {
   chartsCustomizations,
@@ -28,9 +29,11 @@ export const Dashboard = (props) => {
   return (
     <AppTheme {...props} themeComponents={xThemeComponents}>
       <CssBaseline enableColorScheme />
+      <Navbar />
+
       {/* It is the background color of the dashboard */}
       <Box sx={{ display: "flex" }}>
-        {/* <SideMenu /> */}
+        <SideMenu />
         <AppNavbar />
         <Box
           component="main"

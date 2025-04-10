@@ -5,7 +5,7 @@ import bcrypt   # pip install bcrypt
 
 class ProviderUser(BaseModel):
     
-    providerId: str
+    # providerId: str
     name: str
     email: str
     password: str
@@ -18,7 +18,7 @@ class ProviderUser(BaseModel):
     
 class ProviderUserOut(BaseModel):
     id: str = Field(alias="_id")
-    providerId: str
+    # providerId: str   
     name: str
     email: Optional[str] = None
     password: Optional[str] = None

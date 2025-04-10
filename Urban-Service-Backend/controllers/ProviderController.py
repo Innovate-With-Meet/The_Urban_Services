@@ -6,9 +6,9 @@ from fastapi.responses import JSONResponse
 import bcrypt
 from datetime import datetime, timedelta
 import jwt
-
+from fastapi.security import OAuth2PasswordBearer
 SECRET_KEY = "your_secret_provider_key"
-ALGORITHM = "RS256"
+ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 300
 
 def create_access_token(data: dict, expires_delta: timedelta | None = None):
