@@ -1,2 +1,0 @@
-End-User Manage Module & Features:
-Manage User Identities like Creation, Monitoring,Changing: Id Login,

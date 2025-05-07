@@ -1,4 +1,0 @@
-Header
-(Hero Content)Main Content
-Side bar
-Footer
