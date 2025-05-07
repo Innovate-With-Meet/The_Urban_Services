@@ -1,9 +1,0 @@
-User: Admin,End-User,Provider
-Module1:End-User Module
-Module2:Provider Module
-Module3:Admin Module
-Module4:Landing Module(Web Pages)
-
-Module6:Services Module(IMP)
-Module7:Authentication Module(Registration)
-Module8:Other Pages(Contact,About-us)
