@@ -14,7 +14,7 @@ import { Registration } from "./Authentication/SignIn/Registration";
 import { Home } from "./Hero/Home";
 import { Services } from "./Services/Services";
 import { BlogPage } from "../src/Blog/BlogPage";
-import { TestCode } from "../src/CodeTestGround/TestCode";
+import { TestGroundCode } from "../src/CodeTestGround/TestGroundCode";
 // import { AdminRoutes } from "./AdminModule/Routes/AdminRoutes";
 import { AdminProfile } from "../src/Profiles/AdminProfile";
 import { Contact } from "../src/Contact";
@@ -52,7 +52,7 @@ function App() {
   //   "/",
   //   "/Dashboard",
   //   "/BlogPage",
-  //   "/TestCode",
+  //   "/TestGroundCode",
   //   "/Services",
   //   "/Contact",
   //   "/Aboutus",
@@ -90,7 +90,7 @@ function App() {
         {/* <Route path="/Navbar" element={<Navbar />}></Route> */}
         <Route path="/Dashboard" element={<Dashboard />}></Route>
         <Route path="/BlogPage" element={<BlogPage />}></Route>
-        <Route path="/TestCode" element={<TestCode />}></Route>
+        <Route path="/TestGroundCode" element={<TestGroundCode />}></Route>
         <Route path="/Services" element={<Services />}></Route>
         <Route path="/Contact" element={<Contact />}></Route>
         <Route path="/Aboutus" element={<Aboutus />}></Route>
