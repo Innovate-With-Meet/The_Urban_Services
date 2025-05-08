@@ -1,6 +1,6 @@
 
 
-![Welcome To Meet Rana's GitHub](https://readme-typing-svg.demolab.com?font=Fira+Code&duration=3000&pause=1000&center=true&vCenter=true&width=435&lines=Hi+%F0%9F%91%8B%2C+I'm+Meet+Rana!;Backend+Developer+%7C+AI%2FML+Enthusiast;Building+Smart+Solutions+with+Code!)
+
 
 # The Urban Services
 
