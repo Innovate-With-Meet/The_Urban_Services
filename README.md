@@ -1,4 +1,4 @@
-<!--<a href="https://www.adamalston.com/"><img height="137px" src="https://github-readme-stats.vercel.app/api?username=adamalston&hide_title=true&hide_border=true&show_icons=true&include_all_commits=true&count_private=true&line_height=21&text_color=000&icon_color=000&bg_color=0,ea6161,ffc64d,fffc4d,52fa5a&theme=graywhite" /><!-- wi*quL3fcV --><img height="137px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=adamalston&hide=html&hide_title=true&hide_border=true&layout=compact&langs_count=6&exclude_repo=comp426,Redventures-Movie-Quotes&text_color=000&icon_color=fff&bg_color=0,52fa5a,4dfcff,c64dff&theme=graywhite" /></a> -->
+
 
 ![Welcome To Meet Rana's GitHub](https://readme-typing-svg.demolab.com?font=Fira+Code&duration=3000&pause=1000&center=true&vCenter=true&width=435&lines=Hi+%F0%9F%91%8B%2C+I'm+Meet+Rana!;Backend+Developer+%7C+AI%2FML+Enthusiast;Building+Smart+Solutions+with+Code!)
 
